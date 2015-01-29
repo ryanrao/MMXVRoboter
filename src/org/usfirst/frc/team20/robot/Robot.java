@@ -11,12 +11,28 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  * directory.
  */
 public class Robot extends IterativeRobot {
-    /**
+	SpeedController frontLeft;
+	SpeedController backLeft;
+	SpeedController frontRight;
+	SpeedController backRight;
+	SpeedController clawLeft;
+	SpeedController clawRight;
+	SpeedController elevatorOne;
+	SpeedController elevatorTwo;
+	/**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
-        //ping
+    	//TODO actually assign real ports based on robot configuration
+    			frontLeft = new CANTalon(0);
+    			frontRight = new CANTalon(0);
+    			backLeft = new CANTalon(0);
+    			backRight = new CANTalon(0);
+    			clawLeft = new CANTalon(0);
+    			clawRight = new CANTalon(0);
+    			elevatorOne = new CANTalon(0);
+    			elevatorTwo = new CANTalon(0);
     }
 
     /**
