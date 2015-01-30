@@ -1,7 +1,10 @@
 
 package org.usfirst.frc.team20.robot;
 
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.SpeedController;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
