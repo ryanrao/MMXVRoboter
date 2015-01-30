@@ -11,13 +11,11 @@ import org.usfirst.frc.team20.robot.Sensors;
 public class ClosedClaw implements IClaw {
 	
 	public void open(double speed) {
-		// TODO actually assign real values based on robot configuration
-		Robot.clawLeftSC.set(0);
-		Robot.clawRightSC.set(0);
+		Robot.clawLeftSC.set(speed);
+		Robot.clawRightSC.set(speed);
 	}
 
 	public void close(double speed) {
-		//Leave Empty
 	}
 
 	public void update() {
