@@ -1,5 +1,7 @@
 package org.usfirst.frc.team20.robot;
 
+import org.usfirst.frc.team20.robot.subsystem.IElevator;
+
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.SpeedController;
@@ -18,6 +20,7 @@ public class Robot extends IterativeRobot {
 	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
 		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo;
 	
+	public static IElevator elevator;
 	public static DriveInput driveInput;
 
 	/*
