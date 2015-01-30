@@ -21,6 +21,7 @@ public class Robot extends IterativeRobot {
 		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo;
 	
 	public static IClaw claw;
+    public static IElevator elevator;
 	public static DriveInput driveInput;
 
 	/*
