@@ -3,11 +3,6 @@ package org.usfirst.frc.team20.robot;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.SpeedController;
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d8b465a6241bf3406a06359199ffacc42074d77
-
 /**
  * Robot class. If you could say, the robot 'has a' blank, then it's probably
  * defined here. I'm no more a fan of globals than the next guy, but for
