@@ -1,6 +1,6 @@
 package org.usfirst.frc.team20.robot;
 
-import org.usfirst.frc.team20.robot.subsystem.IElevator;
+import org.usfirst.frc.team20.robot.subsystem.IClaw;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj.SpeedController;
  * parameterizing each subsystem with the sensors it needs, and easier to code
  * than lazy singletons or what not.
  * 
- * @author Hiren 'bhavtsar' Bhavsar
+ * @author Hiren 'bhavtsar' Bhavsar <bhavsar.hsb@gmail.com>
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  */
 public class Robot extends IterativeRobot {
@@ -20,7 +20,7 @@ public class Robot extends IterativeRobot {
 	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
 		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo;
 	
-	public static IElevator elevator;
+	public static IClaw claw;
 	public static DriveInput driveInput;
 
 	/*

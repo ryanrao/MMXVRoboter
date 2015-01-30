@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.Gyro;
 /**
  *
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
+ * @author Hiren 'BhavTsar' Bhavsar <bhavsar.hsb@gmail.com>
  */
 public class Sensors {
 
@@ -60,4 +61,14 @@ public class Sensors {
 	 * Switch to determine if an object is in the claw.
 	 */
 	public static final DigitalInput toteInClawSwitch = new DigitalInput(0);
+	
+	/**
+	 * Switch to determine if the claw is fully open.
+	 */
+	public static final DigitalInput clawOpenedSwitch= new DigitalInput(0);
+	
+	/**
+	 * Switch to determine if the claw is fully closed.
+	 */
+	public static final DigitalInput clawClosedSwitch = new DigitalInput(0);
 }
