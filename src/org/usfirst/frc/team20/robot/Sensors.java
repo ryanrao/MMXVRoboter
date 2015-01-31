@@ -32,6 +32,11 @@ public class Sensors {
 	 * lift whenever the claw hits the elevatorRaisedSwitch.
 	 */
 	public static final Encoder elevatorEncoder = new Encoder(0, 0);
+	
+	/**
+	 * Encoder on robot tray to determine how far out the tray has been extended.
+	 */
+	public static final Encoder trayEncoder = new Encoder(0,0);
 
 	/**
 	 * Gyro to determine angle of robot relative to field. Possible uses could
@@ -41,10 +46,14 @@ public class Sensors {
 
 	/**
 	 * Switch to determine if the tray to receive totes from the feeding station
-	 * is in or out.
+	 * is in.
 	 */
-	public static final DigitalInput traySwitch = new DigitalInput(0);
-
+	public static final DigitalInput trayRetractedSwitch = new DigitalInput(0);
+	/**
+	 * Switch to determine if the tray to receive totes from the feeding station 
+	 * is out.
+	 */
+	public static final DigitalInput trayExtendedSwitch = new DigitalInput(0);
 	/**
 	 * Switch to determine if the elevator is lowered fully, used for
 	 * calibrating the encoder and for changing states.

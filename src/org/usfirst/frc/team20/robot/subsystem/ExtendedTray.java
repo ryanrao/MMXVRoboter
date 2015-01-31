@@ -1,5 +1,8 @@
 package org.usfirst.frc.team20.robot.subsystem;
 
+import org.usfirst.frc.team20.robot.Robot;
+import org.usfirst.frc.team20.robot.Sensors;
+
 /**
  * 
  * @author Hiren 'BhavTsar' Bhavsar <bhavsar.hsb@gmail.com>
@@ -15,13 +18,15 @@ public class ExtendedTray implements ITray{
 
 	@Override
 	public void retract(double speed) {
-		//TODO If pneumatics are used to control the tray.
+		Robot.traySC.set(-speed);
 		
 	}
 
 	@Override
 	public void update() {
-		//TODO If pneumatics are used to control the tray.
+		if (!Sensors.trayExtendedSwitch.get()) {
+			Robot.tray = new TrayMiddle();
+		}
 		
 	}
 	

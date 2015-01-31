@@ -21,6 +21,8 @@ public class Robot extends IterativeRobot {
 
 	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
 		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo;
+	//Weird bug. This has to be separate.
+	public static final SpeedController traySC;
 	
 	public static IClaw claw;
     public static IElevator elevator;
@@ -40,6 +42,7 @@ public class Robot extends IterativeRobot {
 		clawRightSC = new CANTalon(0);
 		elevatorSCOne = new CANTalon(0);
 		elevatorSCTwo = new CANTalon(0);
+		traySC = new CANTalon(0);
 	}
 
 	/**
