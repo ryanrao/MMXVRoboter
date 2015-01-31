@@ -2,6 +2,7 @@ package org.usfirst.frc.team20.robot;
 
 import org.usfirst.frc.team20.robot.subsystem.IClaw;
 import org.usfirst.frc.team20.robot.subsystem.IElevator;
+import org.usfirst.frc.team20.robot.subsystem.ITray;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -24,6 +25,7 @@ public class Robot extends IterativeRobot {
 	public static IClaw claw;
     public static IElevator elevator;
 	public static DriveInput driveInput;
+	public static ITray tray;
 
 	/*
 	 * Initialize all static members (subsystems and speed controllers.)
