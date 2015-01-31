@@ -41,21 +41,21 @@ public class Sensors {
 
 	/**
 	 * Switch to determine if the tray to receive totes from the feeding station
-	 * is in or out.
+	 * is fully extended.
 	 */
-	public static final DigitalInput traySwitch = new DigitalInput(0);
+	public static final DigitalInput trayExtendedSwitch = new DigitalInput(0);
+	
+	/**
+	 * Switch to determine if the tray to receive totes from the feeding station
+	 * is fully retracted.
+	 */
+	public static final DigitalInput trayRetractedSwitch = new DigitalInput(0);
 
 	/**
 	 * Switch to determine if the elevator is lowered fully, used for
 	 * calibrating the encoder and for changing states.
 	 */
 	public static final DigitalInput elevatorLoweredSwitch = new DigitalInput(0);
-
-	/**
-	 * Switch to determine if the elevator is raised fully, used for calibrating
-	 * the encoder and for changing states.
-	 */
-	public static final DigitalInput elevatorRaisedSwitch = new DigitalInput(0);
 
 	/**
 	 * Switch to determine if an object is in the claw.

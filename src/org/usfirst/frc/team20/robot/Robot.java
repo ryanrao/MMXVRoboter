@@ -2,6 +2,10 @@ package org.usfirst.frc.team20.robot;
 
 import org.usfirst.frc.team20.robot.subsystem.IClaw;
 import org.usfirst.frc.team20.robot.subsystem.IElevator;
+import org.usfirst.frc.team20.robot.subsystem.ITray;
+import org.usfirst.frc.team20.robot.subsystem.claw.ClawIndeterminate;
+import org.usfirst.frc.team20.robot.subsystem.elevator.ElevatorIndeterminate;
+import org.usfirst.frc.team20.robot.subsystem.tray.TrayIndeterminate;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -18,11 +22,15 @@ import edu.wpi.first.wpilibj.SpeedController;
  */
 public class Robot extends IterativeRobot {
 
+	private Robot(){}
+	
 	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
-		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo;
+		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo, traySC;
 	
 	public static IClaw claw;
+	public static ITray tray;
     public static IElevator elevator;
+    
 	public static DriveInput driveInput;
 
 	/*
@@ -38,6 +46,13 @@ public class Robot extends IterativeRobot {
 		clawRightSC = new CANTalon(0);
 		elevatorSCOne = new CANTalon(0);
 		elevatorSCTwo = new CANTalon(0);
+		traySC = new CANTalon(0);
+		
+		claw = new ClawIndeterminate();
+		tray = new TrayIndeterminate();
+		elevator = new ElevatorIndeterminate();
+		
+		driveInput = new DriveInput();
 	}
 
 	/**

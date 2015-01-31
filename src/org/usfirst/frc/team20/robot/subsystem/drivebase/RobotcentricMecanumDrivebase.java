@@ -4,6 +4,15 @@ import org.usfirst.frc.team20.robot.DriveInput;
 import org.usfirst.frc.team20.robot.Robot;
 import org.usfirst.frc.team20.robot.subsystem.IDrivebase;
 
+/**
+ * Implementation of a robotcentric mecanum drivebase.  This Drivebase will 
+ * apply the forward input in the forward direction relative to the front of
+ * the robot.
+ * 
+ * @author Hiren 'BhavTsar' Bhavsar <bhavsar.hsb@gmail.com>
+ * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
+ *
+ */
 public class RobotcentricMecanumDrivebase implements IDrivebase{
 
 	@Override public void drive() {

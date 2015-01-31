@@ -5,7 +5,7 @@ package org.usfirst.frc.team20.robot.subsystem;
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  */
 public interface IElevator extends ISubsystem {
-
+	
 	/**
 	 * Raise the elevator at some fixed rate. Implementations should be similar
 	 * to states, in that if the elevator is fully up (in the 'elevator up'
