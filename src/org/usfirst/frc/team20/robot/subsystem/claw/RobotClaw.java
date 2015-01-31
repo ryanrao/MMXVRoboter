@@ -10,6 +10,7 @@ import org.usfirst.frc.team20.robot.subsystem.IClaw;
  * and also to provide the default behaviors nonetheless.
  * 
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
+ * @author Hiren 'BhavTsar' Bhavsar <bhavsar.hsb@gmail.com>
  *
  */
 public interface RobotClaw extends IClaw{

@@ -14,6 +14,7 @@ import org.usfirst.frc.team20.robot.subsystem.ISubsystem;
  * and also to provide the default behaviors nonetheless.
  * 
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
+ * @author Sandra Wiedmann
  *
  */
 public interface RobotElevator extends IElevator, ISubsystem{
