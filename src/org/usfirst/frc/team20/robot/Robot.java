@@ -5,12 +5,7 @@ import org.usfirst.frc.team20.robot.subsystem.IElevator;
 import org.usfirst.frc.team20.robot.subsystem.ITray;
 import org.usfirst.frc.team20.robot.subsystem.claw.ClawIndeterminate;
 import org.usfirst.frc.team20.robot.subsystem.elevator.ElevatorAtBottom;
-import org.usfirst.frc.team20.robot.subsystem.elevator.ElevatorIndeterminate;
 import org.usfirst.frc.team20.robot.subsystem.tray.TrayIndeterminate;
-
-import edu.wpi.first.wpilibj.CANTalon;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.SpeedController;
 /**
  * Robot class. If you could say, the robot 'has a' blank, then it's probably
  * defined here. I'm no more a fan of globals than the next guy, but for

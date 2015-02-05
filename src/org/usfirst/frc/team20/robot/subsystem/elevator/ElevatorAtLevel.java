@@ -1,7 +1,6 @@
 package org.usfirst.frc.team20.robot.subsystem.elevator;
 
 import org.usfirst.frc.team20.robot.Robot;
-import org.usfirst.frc.team20.robot.Sensors;
 
 /**
  * State representing an elevator that is in an unidentified position.

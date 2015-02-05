@@ -2,7 +2,6 @@ package org.usfirst.frc.team20.robot.subsystem.claw;
 
 import org.usfirst.frc.team20.robot.Robot;
 import org.usfirst.frc.team20.robot.Sensors;
-import org.usfirst.frc.team20.robot.subsystem.IClaw;
 
 /**
  * 

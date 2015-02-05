@@ -1,8 +1,5 @@
 package org.usfirst.frc.team20.robot;
 
-import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.Gyro;
 
 /**
  *
