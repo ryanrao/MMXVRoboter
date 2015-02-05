@@ -20,14 +20,21 @@ public class ElevatorAtBottom implements RobotElevator{
 	@Override public void drop(double speed) {
 	}
 
+    /**
+     * Return the lowermost level, 0, since the elevator is at the bottom.
+     * @return the lowermost level, 0
+     */
+    @Override public int getLevel(){
+        return 0;
+    }
+
 	/**
 	 * Update the state of the elevator.  The next state will be
 	 * ElevatorIndeterminate.
 	 */
 	@Override public void update() {
 		if(!Sensors.elevatorLoweredSwitch.get()){
-			Robot.elevator = new ElevatorIndeterminate();
+			Robot.elevator = new ElevatorIndeterminate(0);
 		}
 	}
-
 }

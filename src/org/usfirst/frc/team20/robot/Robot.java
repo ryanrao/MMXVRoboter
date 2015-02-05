@@ -4,7 +4,7 @@ import org.usfirst.frc.team20.robot.subsystem.IClaw;
 import org.usfirst.frc.team20.robot.subsystem.IElevator;
 import org.usfirst.frc.team20.robot.subsystem.ITray;
 import org.usfirst.frc.team20.robot.subsystem.claw.ClawIndeterminate;
-import org.usfirst.frc.team20.robot.subsystem.elevator.ElevatorIndeterminate;
+import org.usfirst.frc.team20.robot.subsystem.elevator.ElevatorAtBottom;
 import org.usfirst.frc.team20.robot.subsystem.tray.TrayIndeterminate;
 
 import edu.wpi.first.wpilibj.CANTalon;
@@ -50,8 +50,7 @@ public class Robot extends IterativeRobot {
 		
 		claw = new ClawIndeterminate();
 		tray = new TrayIndeterminate();
-		elevator = new ElevatorIndeterminate();
-		
+		elevator = new ElevatorAtBottom();
 		driveInput = new DriveInput();
 	}
 

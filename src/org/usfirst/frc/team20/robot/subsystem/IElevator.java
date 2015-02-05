@@ -20,6 +20,14 @@ public interface IElevator extends ISubsystem {
 	 */
 	void drop(double speed);
 
+    /**
+     * Get the current level of the elevator.  The elevator level is determined
+     * by encoder values with the robot elevator divided equally into segments of
+     * (total height / number of levels) height.
+     * @return the 
+     */
+    int getLevel();
+
 	/**
 	 * {@inheritDoc}
 	 */
