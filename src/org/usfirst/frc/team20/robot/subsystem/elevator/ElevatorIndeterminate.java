@@ -12,6 +12,16 @@ import org.usfirst.frc.team20.robot.Sensors;
  */
 public class ElevatorIndeterminate implements RobotElevator{
 
+	private int level;
+	
+	public ElevatorIndeterminate(int level) {
+		this.level = level;
+	}
+	
+	@Override public int getLevel(){
+		return this.level;
+	}
+	
 	/**
 	 * Update the state of the elevator.  Possible next states include ElevatorAtBottom
 	 * and ElevatorAtTop.

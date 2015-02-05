@@ -2,6 +2,7 @@ package org.usfirst.frc.team20.robot.subsystem.elevator;
 
 import org.usfirst.frc.team20.robot.Robot;
 import org.usfirst.frc.team20.robot.Sensors;
+import org.usfirst.frc.team20.robot.subsystem.IElevator;
 
 /**
  * State representing an elevator that is at the bottom of its path.
@@ -18,7 +19,10 @@ public class ElevatorAtBottom implements RobotElevator{
 	 * @param speed not used
 	 */
 	@Override public void drop(double speed) {
-		
+	}
+	
+	@Override public int getLevel(){
+		return 0;
 	}
 
 	/**
@@ -27,8 +31,13 @@ public class ElevatorAtBottom implements RobotElevator{
 	 */
 	@Override public void update() {
 		if(!Sensors.elevatorLoweredSwitch.get()){
-			Robot.elevator = new ElevatorIndeterminate();
+			Robot.elevator = new ElevatorIndeterminate(0);
 		}
+	}
+
+	public static IElevator getInstance() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

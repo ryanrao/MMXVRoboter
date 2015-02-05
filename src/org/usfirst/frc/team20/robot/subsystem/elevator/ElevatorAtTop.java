@@ -1,5 +1,6 @@
 package org.usfirst.frc.team20.robot.subsystem.elevator;
 
+import org.usfirst.frc.team20.robot.Constants;
 import org.usfirst.frc.team20.robot.Robot;
 
 /**
@@ -18,6 +19,10 @@ public class ElevatorAtTop implements RobotElevator{
 	 */
 	@Override public void lift(double speed) {
 	}
+	
+	@Override public int getLevel(){
+		return Constants.ELEVATOR_MAX_LEVEL;
+	}
 
 	/**
 	 * Update the state of the elevator.  The next state will be
@@ -26,7 +31,7 @@ public class ElevatorAtTop implements RobotElevator{
 	@Override public void update() {
 		//check if the elevator is approximately at maximum height
 		if(!RobotElevator.isElevatorAtTop()){
-			Robot.elevator = new ElevatorIndeterminate();
+			Robot.elevator = new ElevatorIndeterminate(Constants.ELEVATOR_MAX_LEVEL);
 		}
 		
 	}

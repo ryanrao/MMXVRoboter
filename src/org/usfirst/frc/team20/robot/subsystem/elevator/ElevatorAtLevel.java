@@ -11,8 +11,16 @@ import org.usfirst.frc.team20.robot.Robot;
  */
 public class ElevatorAtLevel implements RobotElevator{
 
-    public 
+	private int level;
+	
+    public ElevatorAtLevel(int level) {
+		this.level = level;
+	}
 
+    @Override public int getLevel(){
+    	return this.level;
+    }
+    
 	/**
 	 * Update the state of the elevator.  Possible next states include ElevatorAtBottom
 	 * and ElevatorAtTop.

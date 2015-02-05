@@ -14,14 +14,14 @@ public interface ITray extends ISubsystem {
 	 * states, in that if the tray is fully out (in the 'tray out' state), the
 	 * extend() method should do nothing.
 	 */
-	void extend();
+	void extend(double speed);
 
 	/**
 	 * Retract the tray at some fixed rate. Implementations should be similar to
 	 * states, in that if the tray is fully in (in the 'tray in' state), the
 	 * retract() method should do nothing.
 	 */
-	void retract();
+	void retract(double speed);
 
 	/**
 	 * {@inheritDoc}

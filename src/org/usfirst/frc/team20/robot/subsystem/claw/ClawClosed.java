@@ -18,4 +18,9 @@ public class ClawClosed implements RobotClaw {
 			Robot.claw = new ClawIndeterminate();
 		}
 	}
+
+	public static RobotClaw getInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
