@@ -18,6 +18,10 @@ public class ElevatorIndeterminate implements RobotElevator{
 		this.level = level;
 	}
 	
+    /**
+     * Return the current level of the elevator.
+     * @return the level of the elevator
+     */
 	@Override public int getLevel(){
 		return this.level;
 	}

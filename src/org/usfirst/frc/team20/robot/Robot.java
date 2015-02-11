@@ -1,5 +1,9 @@
 package org.usfirst.frc.team20.robot;
 
+import org.usfirst.frc.team20.robot.input.DriveInput;
+import org.usfirst.frc.team20.robot.input.OperatorController;
+import org.usfirst.frc.team20.robot.input.OperatorInput;
+import org.usfirst.frc.team20.robot.input.XBoxControllerDriveInput;
 import org.usfirst.frc.team20.robot.subsystem.claw.ClawClosed;
 import org.usfirst.frc.team20.robot.subsystem.claw.ClawIndeterminate;
 import org.usfirst.frc.team20.robot.subsystem.claw.RobotClaw;
@@ -28,13 +32,16 @@ public class Robot extends IterativeRobot {
 	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
 		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo, traySC;
 	
-	OperatorController controller;
-	
 	public static RobotClaw claw;
 	public static RobotTray tray;
     public static RobotElevator elevator;
     
 	public static DriveInput driveInput;
+	public static OperatorInput operatorInput;
+	
+	public static OperatorController controller;
+	
+	private static final int DRIVER_JOYSTICK_SLOT= 0;
 
 	/*
 	 * Initialize all static members (subsystems and speed controllers.)
@@ -54,14 +61,13 @@ public class Robot extends IterativeRobot {
 		claw = new ClawIndeterminate();
 		tray = new TrayIndeterminate();
 		elevator = new ElevatorAtBottom();
-		driveInput = new DriveInput();
+		driveInput = new XBoxControllerDriveInput(DRIVER_JOYSTICK_SLOT);
 	}
 
 	/**
-	 * Method to initialize the robot. Don't ask me why it exists and why it's
-	 * any better than an initializer (sigh) but I do what I'm told.
+	 * Method to initialize the robot.
 	 */
-	public void robotInit() {
+	@Override public void robotInit() {
 		controller.setClawCloseAction(()->{
 			claw.close(.1);
 		});
@@ -108,26 +114,31 @@ public class Robot extends IterativeRobot {
 				}else{
 					claw.open(.1);
 					elevator.drop(.1);
-				}	
+				}
 			}
 		});
 		
-		controller.setTrayAction(()->{
+		controller.setTrayExtendAction(()->{
 			tray.extend(.1);
+		});
+		
+		controller.setTrayRetractAction(()->{
+			tray.retract(.1);
 		});
 	}
 
 	/**
-	 * Called in a loop during autonomous. Not really that helpful.
+	 * Called in a loop during autonomous.s
 	 */
-	public void autonomousPeriodic() {
+	@Override public void autonomousPeriodic() {
 
 	}
 
 	/**
-	 * Called in a loop during teleop. Used to update each Subsystem state.
+	 * Called in a loop during teleop. Used to update each Subsystem state.  Oh, also
+	 * updates the operator controller state.
 	 */
-	public void teleopPeriodic() {
+	@Override public void teleopPeriodic() {
 		claw.update();
 		elevator.update();
 		tray.update();
@@ -137,7 +148,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during test mode
 	 */
-	public void testPeriodic() {
+	@Override public void testPeriodic() {
 
 	}
 }

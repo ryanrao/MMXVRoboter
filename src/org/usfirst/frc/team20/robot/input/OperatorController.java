@@ -1,4 +1,4 @@
-package org.usfirst.frc.team20.robot;
+package org.usfirst.frc.team20.robot.input;
 
 public interface OperatorController {
 	
@@ -12,7 +12,9 @@ public interface OperatorController {
 
 	void setDropAction(Runnable action);
 	
-	void setTrayAction(Runnable action);
+	void setTrayExtendAction(Runnable action);
+	
+	void setTrayRetractAction(Runnable action);
 	
 	void setPickupAction(Runnable action);
 	

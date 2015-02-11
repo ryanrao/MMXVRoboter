@@ -20,6 +20,10 @@ public class ElevatorAtTop implements RobotElevator{
 	@Override public void lift(double speed) {
 	}
 	
+    /**
+     * Return the level of the elevator which is currently the max level
+     * @return the level of the elevator
+     */
 	@Override public int getLevel(){
 		return Constants.ELEVATOR_MAX_LEVEL;
 	}

@@ -21,6 +21,10 @@ public class ElevatorAtBottom implements RobotElevator{
 	@Override public void drop(double speed) {
 	}
 	
+    /**
+     * Return the level of the elevator, which is currently 0.
+     * @return the level of the elevator
+     */
 	@Override public int getLevel(){
 		return 0;
 	}

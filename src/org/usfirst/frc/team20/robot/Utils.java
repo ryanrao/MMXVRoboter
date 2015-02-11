@@ -6,7 +6,11 @@ public class Utils {
 		return ((eq1 - epsilon) < eq2 && (eq1 + epsilon) > eq2);
 	}
 	
-	public static boolean withinRange(double check, double min, double max){
-		return check > min && check < max;
+	public static double limit(double voltage) {
+		if (voltage >= 1)
+			return 1;
+		if (voltage <= -1)
+			return -1;
+		return voltage;
 	}
 }
