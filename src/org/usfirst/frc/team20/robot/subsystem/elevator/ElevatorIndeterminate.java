@@ -32,7 +32,7 @@ public class ElevatorIndeterminate implements RobotElevator{
 	 */
 	@Override public void update() {
 		if(Sensors.elevatorLoweredSwitch.get()){
-			Sensors.elevatorEncoder.reset();
+			Robot.elevatorSCOne.setPosition(0);
 			Robot.elevator = new ElevatorAtBottom();
 		}else if(RobotElevator.isElevatorAtTop()){
 			Robot.elevator = new ElevatorAtTop();

@@ -23,7 +23,7 @@ public interface RobotElevator extends IElevator, ISubsystem{
 	 * @return if the elevator is at the top of the lift.
 	 */
 	static boolean isElevatorAtTop(){
-		return Utils.epsilonEquals(Sensors.elevatorEncoder.getDistance(), 
+		return Utils.epsilonEquals(Robot.elevatorSCOne.getEncPosition(),
 			Constants.ELEVATOR_HEIGHT, 0.1f);
 	}
 	
@@ -44,13 +44,13 @@ public interface RobotElevator extends IElevator, ISubsystem{
 	 */
 	static ElevatorLevel getElevatorLevel(){
 		ElevatorLevel level = new ElevatorLevel();
-		double distance = Sensors.elevatorEncoder.getDistance();
+		double distance = Robot.elevatorSCOne.getEncPosition();
 		level.height = distance;
 		if(Sensors.elevatorLoweredSwitch.get()){
 			level.atLevel = true;
 			level.level = 0;
-			level.height = 0;
-			Sensors.elevatorEncoder.reset();
+			level.height = 0; 
+			Robot.elevatorSCOne.setPosition(0);
 		}
 		if(isElevatorAtTop()){
 			level.atLevel = true;

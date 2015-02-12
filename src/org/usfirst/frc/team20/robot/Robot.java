@@ -14,7 +14,7 @@ import org.usfirst.frc.team20.robot.subsystem.tray.TrayIndeterminate;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Talon;
 /**
  * Robot class. If you could say, the robot 'has a' blank, then it's probably
  * defined here. I'm no more a fan of globals than the next guy, but for
@@ -29,8 +29,10 @@ public class Robot extends IterativeRobot {
 
 	private Robot(){}
 	
-	public static final SpeedController frontLeftSC, backLeftSC, frontRightSC,
-		backRightSC, clawLeftSC, clawRightSC, elevatorSCOne, elevatorSCTwo, traySC;
+	public static final CANTalon frontLeftSC, backLeftSC, frontRightSC,
+		backRightSC, elevatorSCOne, elevatorSCTwo, traySC;
+	
+	public static final Talon clawLeftSC, clawRightSC;
 	
 	public static RobotClaw claw;
 	public static RobotTray tray;
@@ -52,11 +54,12 @@ public class Robot extends IterativeRobot {
 		frontRightSC = new CANTalon(0);
 		backLeftSC = new CANTalon(0);
 		backRightSC = new CANTalon(0);
-		clawLeftSC = new CANTalon(0);
-		clawRightSC = new CANTalon(0);
 		elevatorSCOne = new CANTalon(0);
 		elevatorSCTwo = new CANTalon(0);
 		traySC = new CANTalon(0);
+		
+		clawLeftSC = new Talon(0);
+		clawRightSC = new Talon(0);
 		
 		claw = new ClawIndeterminate();
 		tray = new TrayIndeterminate();
