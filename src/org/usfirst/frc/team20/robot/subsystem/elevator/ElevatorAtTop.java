@@ -10,33 +10,36 @@ import org.usfirst.frc.team20.robot.Robot;
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  *
  */
-public class ElevatorAtTop implements RobotElevator{
+public class ElevatorAtTop implements RobotElevator {
 
 	/**
-	 * Override the default lift to prohibit lifting on an elevator that is
-	 * at the maximum height.
-	 * @param speed not used
+	 * Override the default lift to prohibit lifting on an elevator that is at
+	 * the maximum height.
+	 * 
+	 * @param speed
+	 *            not used
 	 */
-	@Override public void lift(double speed) {
-	}
-	
-    /**
-     * Return the level of the elevator which is currently the max level
-     * @return the level of the elevator
-     */
-	@Override public int getLevel(){
+	@Override public void lift(double speed) {}
+
+	/**
+	 * Return the level of the elevator which is currently the max level
+	 * 
+	 * @return the level of the elevator
+	 */
+	@Override public int getLevel() {
 		return Constants.ELEVATOR_MAX_LEVEL;
 	}
 
 	/**
-	 * Update the state of the elevator.  The next state will be
+	 * Update the state of the elevator. The next state will be
 	 * ElevatorIndeterminate.
 	 */
 	@Override public void update() {
-		//check if the elevator is approximately at maximum height
-		if(!RobotElevator.isElevatorAtTop()){
-			Robot.elevator = new ElevatorIndeterminate(Constants.ELEVATOR_MAX_LEVEL);
+		// check if the elevator is approximately at maximum height
+		if (!RobotElevator.isElevatorAtTop()) {
+			Robot.elevator = new ElevatorIndeterminate(
+				Constants.ELEVATOR_MAX_LEVEL);
 		}
-		
+
 	}
 }

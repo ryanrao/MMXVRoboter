@@ -9,23 +9,23 @@ import org.usfirst.frc.team20.robot.Sensors;
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  *
  */
-public class TrayExtended implements RobotTray{
-	
-	/**
-	 * Override the default extend to prohibit extending on a tray that is
-	 * fully extended.
-	 * @param speed not used
-	 */
-	@Override public void extend(double speed){
-	}
+public class TrayExtended implements RobotTray {
 
 	/**
-	 * Update the state of the tray.  The next state will be TrayIndeterminate.
+	 * Override the default extend to prohibit extending on a tray that is fully
+	 * extended.
+	 * 
+	 * @param speed
+	 *            not used
+	 */
+	@Override public void extend(double speed) {}
+
+	/**
+	 * Update the state of the tray. The next state will be TrayIndeterminate.
 	 */
 	@Override public void update() {
-		if(!Sensors.trayExtendedSwitch.get()){
+		if (!Sensors.trayExtendedSwitch.get()) {
 			Robot.tray = new TrayIndeterminate();
 		}
 	}
-
 }

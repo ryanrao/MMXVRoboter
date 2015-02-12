@@ -10,8 +10,7 @@ import org.usfirst.frc.team20.robot.Sensors;
  */
 public class ClawOpen implements RobotClaw {
 
-	@Override public void open(double speed) {
-	}
+	@Override public void open(double speed) {}
 
 	public void update() {
 		if (!Sensors.clawOpenedSwitch.get()) {

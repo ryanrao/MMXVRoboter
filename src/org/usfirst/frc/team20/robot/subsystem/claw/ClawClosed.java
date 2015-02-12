@@ -9,18 +9,12 @@ import org.usfirst.frc.team20.robot.Sensors;
  *
  */
 public class ClawClosed implements RobotClaw {
-	
-	public void close(double speed) {
-	}
+
+	public void close(double speed) {}
 
 	public void update() {
 		if (!Sensors.clawClosedSwitch.get()) {
 			Robot.claw = new ClawIndeterminate();
 		}
-	}
-
-	public static RobotClaw getInstance() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

@@ -9,23 +9,23 @@ import org.usfirst.frc.team20.robot.Robot;
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  *
  */
-public class ElevatorAtLevel implements RobotElevator{
+public class ElevatorAtLevel implements RobotElevator {
 
 	private int level;
-	
-    public ElevatorAtLevel(int level) {
+
+	public ElevatorAtLevel(int level) {
 		this.level = level;
 	}
 
-    @Override public int getLevel(){
-    	return this.level;
-    }
-    
+	@Override public int getLevel() {
+		return this.level;
+	}
+
 	/**
-	 * Update the state of the elevator.  Possible next states include ElevatorAtBottom
-	 * and ElevatorAtTop.
+	 * Update the state of the elevator. Possible next states include
+	 * ElevatorAtBottom and ElevatorAtTop.
 	 */
 	@Override public void update() {
-        Robot.elevator = RobotElevator.getLevelState();
+		Robot.elevator = RobotElevator.getLevelState();
 	}
 }

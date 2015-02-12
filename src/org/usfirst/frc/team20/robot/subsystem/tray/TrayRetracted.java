@@ -8,16 +8,17 @@ public class TrayRetracted implements RobotTray {
 	/**
 	 * Override the default retract to prohibit retracting on a tray that is
 	 * fully retracted.
-	 * @param speed not used
+	 * 
+	 * @param speed
+	 *            not used
 	 */
-	@Override public void retract(double speed) {
-	}
+	@Override public void retract(double speed) {}
 
 	/**
-	 * Update the state of the tray.  The next state will be TrayIndeterminate.
+	 * Update the state of the tray. The next state will be TrayIndeterminate.
 	 */
 	@Override public void update() {
-		if(!Sensors.trayRetractedSwitch.get()){
+		if (!Sensors.trayRetractedSwitch.get()) {
 			Robot.tray = new TrayIndeterminate();
 		}
 	}

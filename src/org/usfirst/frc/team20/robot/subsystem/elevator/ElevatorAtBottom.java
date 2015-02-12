@@ -2,7 +2,6 @@ package org.usfirst.frc.team20.robot.subsystem.elevator;
 
 import org.usfirst.frc.team20.robot.Robot;
 import org.usfirst.frc.team20.robot.Sensors;
-import org.usfirst.frc.team20.robot.subsystem.IElevator;
 
 /**
  * State representing an elevator that is at the bottom of its path.
@@ -11,37 +10,33 @@ import org.usfirst.frc.team20.robot.subsystem.IElevator;
  * @author Jared 'jarebear' Gentner <jargen3d@yahoo.com>
  *
  */
-public class ElevatorAtBottom implements RobotElevator{
+public class ElevatorAtBottom implements RobotElevator {
 
 	/**
-	 * Override the default lift to prohibit lifting on an elevator that is
-	 * at the maximum height.
-	 * @param speed not used
+	 * Override the default lift to prohibit lifting on an elevator that is at
+	 * the maximum height.
+	 * 
+	 * @param speed
+	 *            not used
 	 */
-	@Override public void drop(double speed) {
-	}
-	
-    /**
-     * Return the level of the elevator, which is currently 0.
-     * @return the level of the elevator
-     */
-	@Override public int getLevel(){
+	@Override public void drop(double speed) {}
+
+	/**
+	 * Return the level of the elevator, which is currently 0.
+	 * 
+	 * @return the level of the elevator
+	 */
+	@Override public int getLevel() {
 		return 0;
 	}
 
 	/**
-	 * Update the state of the elevator.  The next state will be
+	 * Update the state of the elevator. The next state will be
 	 * ElevatorIndeterminate.
 	 */
 	@Override public void update() {
-		if(!Sensors.elevatorLoweredSwitch.get()){
+		if (!Sensors.elevatorLoweredSwitch.get()) {
 			Robot.elevator = new ElevatorIndeterminate(0);
 		}
 	}
-
-	public static IElevator getInstance() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

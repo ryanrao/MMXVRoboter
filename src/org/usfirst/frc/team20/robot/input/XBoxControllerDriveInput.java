@@ -4,15 +4,14 @@ import org.usfirst.frc.team20.robot.Utils;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-
 public class XBoxControllerDriveInput implements DriveInput {
 
 	private Joystick controller;
-	
-	public XBoxControllerDriveInput(int slot){
+
+	public XBoxControllerDriveInput(int slot) {
 		this.controller = new Joystick(slot);
 	}
-	
+
 	@Override public double getForward() {
 		return -controller.getRawAxis(1);
 	}
@@ -22,8 +21,7 @@ public class XBoxControllerDriveInput implements DriveInput {
 	}
 
 	@Override public double getTurn() {
-		double turn = -controller.getRawAxis(3) 
-			+ controller.getRawAxis(2)
+		double turn = -controller.getRawAxis(3) + controller.getRawAxis(2)
 			+ controller.getRawAxis(4);
 		return Utils.limit(turn);
 	}
